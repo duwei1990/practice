@@ -1,0 +1,8 @@
+open()
+read()
+write()
+colse()
+feek()
+argv
+raw_input()
+
