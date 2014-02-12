@@ -29,7 +29,7 @@ for word in urlopen(WORD_URL).readlines():
 results = []
 param_names = []
 for i in range(0, snippet.count("@@@")):
-   param_count = random.randint(1,3)
+   param_count = random.randint(1,3) 
    param_names.append(', '.join(random.sample(WORDS, param_count)))
 for sentence in snippet, phrase:
    result = sentence[:]
