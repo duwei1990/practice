@@ -1,0 +1,9 @@
+a = []
+for i in range(2, 100):
+    list = []
+    for j in range(2, i/2 + 1):
+        if i % j == 0:
+            list.append(j)
+    if not list:
+        a.append(i)
+print a
