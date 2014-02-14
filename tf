@@ -4,20 +4,20 @@ import time
 
 class TextField(unittest.TestCase):
     dr=None
-    url='file:///C:/Users/Administrator/Desktop/homework.html'
+    url='file:///C:/Users/duwei/Desktop/home.html'
     def setUp(self):
         self.dr=webdriver.Firefox()
-        self.url='file:///C:/Users/Administrator/Desktop/homework.html'
+        self.url='file:///C:/Users/duwei/Desktop/home.html'
 
     def test_tf(self):
         dr=self.dr
         dr.get(self.url)
-        self.set(self)
-        self.clear(self)
-        self.click(self)
+        self.set()
+        self.clear()
+        self.click()
         #self.focus(self)
-        ww=dr.find_element_by_id('tf')
-        self.high_light(self,dr,ww)
+        ele=dr.find_element_by_id('tf')
+        self.high_light(dr,ele)
     def set(self):
         self.dr.find_element_by_id('tf').send_keys('duwei')
         time.sleep(2)
@@ -33,7 +33,7 @@ class TextField(unittest.TestCase):
 
     '''
     def high_light(self,dr,ele):
-        self.dr.execute_script("arguments[0].style.border='2px solid red'",self.ele)
+        self.dr.execute_script("arguments[0].style.border='2px solid red'",ele)
 
     def tearDown(self):
         self.dr.quit()
